@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Meal Survey Form</title>
+      <meta name="description" content="Meal Survey Form">
+      <meta name="author" content="Kuba">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   
+   <body>
+      <h1 id="title">Meal Preferences Survey</h1>
+      <p id="description">Thank you for helping us understand your preferences better!</p>
+      <form id="survey-form">
+         
+         <!--Text fields-->
+         <div class="form-group">
+            <label id="name-label" for="name">Your name:</label>
+            <input id="name"
+               class="input-wide"
+               type="text" 
+               placeholder="John Doe" 
+               autocomplete="on" 
+               autofocus 
+               required>
+         </div>
+         <div class="form-group">
+            <label id="email-label" for="email">Email:</label>
+            <input id="email" 
+               class="input-wide"
+               type="email" 
+               placeholder="JDoe@gmail.com"
+               pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+               required>
+         </div>
+         <div class="form-group">
+            <label id="number-label" for="number">On average, how many times a month do you eat out?</label>
+            <input id="number"
+               class="input-wide"
+               type="number" 
+               min="0"
+               max="31"
+               placeholder="1, 2, 3, 4, 5...">
+         </div>
+         
+         <!--dropdown-->
+         <div class="form-group">
+            <label id="dropdown-label" for="dropdown">What is your favourite cuisine?</label>
+            <select id="dropdown" class="input-wide">
+               <option value="placeholder" selected disabled>Select a cuisine</option>
+               <option value="georgian">Georgian</option>
+               <option value="indian">Indian</option>
+               <option value="italian">Italian</option>
+               <option value="japanese">Japanese</option>
+               <option value="mexican">Mexican</option>
+               <option value="polish">Polish</option>
+               <option value="thai">Thai</option>
+               <option value="turkish">Turkish</option>
+            </select>
+         </div>
+         
+         <!--Radio-->
+         <p id="radio-label" class="form-group">How do you like your steak?</p>
+         <div class="form-group radio-group">
+            <label for="rare">
+            <input id="rare" 
+               type="radio" 
+               name="doneness" 
+               value="rare"
+               />Rare
+            </label>
+            <label for="medium_rare">
+            <input id="medium_rare" 
+               type="radio" 
+               name="doneness" 
+               value="medium_rare"
+               />Medium-Rare
+            </label>
+            <label for="medium">
+            <input id="medium" 
+               type="radio" 
+               name="doneness" 
+               value="medium"
+               />Medium
+            </label>
+            <label for="medium_well">
+            <input id="medium_well" 
+               type="radio" 
+               name="doneness" 
+               value="medium_well"
+               />Medium-Well
+            </label>
+            <label for="Well">
+            <input id="Well" 
+               type="radio" 
+               name="doneness" 
+               value="Well"
+               />Well
+            </label>
+         </div>
+         
+         <!--Checkbox-->
+         <div class="form-group checkbox-group">
+            <p id="checkbox-label">Which of the following have you <strong>never</strong> eaten before?</p>
+            <label for="bacon">
+            <input id="bacon" 
+               type="checkbox" 
+               name="bacon" 
+               value="bacon"
+               />Bacon
+            </label>
+            <label for="kielbasa">
+            <input id="kielbasa" 
+               type="checkbox" 
+               name="kielbasa" 
+               value="kielbasa"
+               />Kiełbasa
+            </label>
+            <label for="pastirma">
+            <input id="pastirma" 
+               type="checkbox" 
+               name="pastirma" 
+               value="pastirma"
+               />Pastırma
+            </label>
+            <label for="pulled_pork">
+            <input id="pulled_pork" 
+               type="checkbox" 
+               name="pulled_pork" 
+               value="pulled_pork"
+               />Pulled Pork
+            </label>
+            <label for="sucuk">
+            <input id="sucuk" 
+               type="checkbox" 
+               name="sucuk" 
+               value="sucuk"
+               />Sucuk
+            </label>
+         </div>
+         
+         <!--Comment box-->
+         <div class="form-group">
+            <p id="comment-label">Please leave any additional remarks here:</p>
+            <textarea id="comment" 
+               class="comment-box"
+               name="comment" 
+               placeholder="I would like to add..."></textarea>
+         </div>
+         
+         <!--Sumbit button-->
+         <div class="form-group">
+            <button id="submit" type="submit" formtarget="_blank">Submit
+            </button>
+         </div>
+      </form>
+   </body>
+</html>
