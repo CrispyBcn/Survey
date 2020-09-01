@@ -20,6 +20,7 @@ body {
   font-weight: 550;
   line-height: 1.5;
   background: var(--background-color);
+  padding-top: 5rem;
 }
 
 #title,
