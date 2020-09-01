@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+:root {
+  --container-width: 700px;
+  --background-color: linear-gradient(45deg, #001524 0%, #15616d 100%);
+  --theme-color: #FF7D00;
+  --form-color: linear-gradient(230deg, #729ca2 0%, #abbfc2 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 550;
+  line-height: 1.5;
+  background: var(--background-color);
+}
+
+#title,
+#description {
+  text-align: center;
+  max-width: var(--container-width);
+  margin: 0 auto 10px auto;
+  color: var(--theme-color);
+}
+
+#description {
+  margin-bottom: 40px;
+}
+
+form {
+  max-width: var(--container-width);
+  background: var(--form-color);
+  margin: 0 auto 50px auto;
+  padding: 2rem;
+  border-radius: 5px;
+  color: #ECF3F4;
+}
+
+.form-group {
+  margin: 5px auto 5px auto;
+  padding: 10px 15px;
+}
+
+#name-label,
+#email-label,
+#number-label,
+#dropdown-label,
+#radio-label,
+#comment-label {
+  font-size: 2.2rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+#checkbox-label {
+  font-size: 2.2rem;
+}
+
+.input-wide,
+.comment-box {
+  width: 100%;
+  font-size: 1.7rem;
+  font-family: 'Mulish', sans-serif;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 10px;
+  outline: none;
+  border: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.input-wide {
+  display: block;
+  height: 3.5rem;
+}
+.comment-box {
+  height: 7rem;
+}
+
+/*Set a border in the parent/unfocused element and then transition the color only. Otherwise it looks weird as it starts with creating a border and then changing the color*/
+.input-wide:focus,
+.comment-box:focus {
+  border-color: var(--theme-color);
+  /*border: 2px solid var(--theme-color);*/
+}
+
+/*To make radio in one line, centered. Had to kick <p> out of the div to make it easier. Media goes back to vertical*/
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*To start each checkbox in new line*/
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/*To make the clickable area narrower*/
+.checkbox-group label {
+  max-width: 50%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  min-height: 1.5rem;
+  min-width: 1.5rem;
+}
+
+#submit {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0 auto 0 auto;
+  background-color: var(--theme-color);
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 10px 20px rgba(255, 125, 0, 0.4);
+  transition: all 0.5s;
+}
+
+#submit:hover {
+  background-color: #de7109;
+  transform: scale(1.01)
+}
+
+/*Media queries*/
+@media (max-width: 585px) {
+  html{
+    font-size: 8.75px;
+  }
+}
+
+@media (max-width: 525px) {
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .radio-group label {
+    max-width: 50%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/*Just for future thoughts.
+With this funny code I tried to start checkboxes from a new line. It looked fine but it's kinda weird and will probably get fucked by responsiveness.
+.form-group.checkbox label {
+  display: block;
+  position: relative;
+  width: 30%;
+  padding-left: 25px;
+  bottom: 25px;
+  margin-bottom: -20px;
+}*/
